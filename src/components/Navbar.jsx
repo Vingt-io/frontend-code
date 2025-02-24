@@ -23,7 +23,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Menu, FileText, Mail, Rocket, Home } from "lucide-react";
+import { Menu, FileText, Mail, Rocket, Home, UsersRound } from "lucide-react";
 import Link from "next/link";
 import Logo from '@/assets/images/vingt_icons/white-logo.png';
 
@@ -56,17 +56,17 @@ const Navbar = () => {
             </Link>
           </li>
           <li>
-            <Link href="/about" className="flex items-center gap-1 hover:text-gray-300">
-              <FileText /> About Us
+            <Link href="https://app.vingt.io/aboutUs" target="_blank" className="flex items-center gap-1 hover:text-gray-300">
+              <UsersRound /> About Us
             </Link>
           </li>
           <li>
-            <Link href="/whitepaper" className="flex items-center gap-1 hover:text-gray-300">
+            <Link href="https://vingt-io.gitbook.io/vingt.io" target="_blank" className="flex items-center gap-1 hover:text-gray-300">
               <FileText /> Whitepaper
             </Link>
           </li>
           <li>
-            <Link href="/contact" className="flex items-center gap-1 hover:text-gray-300">
+            <Link href="mailto:support@vingt.io" className="flex items-center gap-1 hover:text-gray-300">
               <Mail /> Contact Us
             </Link>
           </li>
