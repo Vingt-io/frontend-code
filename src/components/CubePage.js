@@ -11,7 +11,6 @@ export default function CubePage() {
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-900">
       <div id="cube-container" className="w-96 h-96"></div>
-
       <Script
         src="/js/3DCube-Bundle.js"
         strategy="lazyOnload"
