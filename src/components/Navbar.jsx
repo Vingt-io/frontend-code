@@ -26,10 +26,11 @@ import { motion } from "framer-motion";
 import { Menu, FileText, Mail, Rocket, Home, UsersRound } from "lucide-react";
 import Link from "next/link";
 import Logo from '@/assets/images/vingt_icons/white-logo.png';
+import { useRouter } from "next/navigation";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
-
+  const {push} =  useRouter();
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
@@ -72,7 +73,7 @@ const Navbar = () => {
           </li>
         </ul>
 
-        <button className="hidden md:block px-4 py-2 bg-white text-[#2f5596] rounded-lg font-semibold hover:bg-gray-200">
+        <button onClick={()=>push('https://app.vingt.io/')} className="hidden md:block px-4 py-2 bg-white text-[#2f5596] rounded-lg font-semibold hover:bg-gray-200">
           Launch App <Rocket className="inline-block ml-2" size={18} />
         </button>
 

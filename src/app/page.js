@@ -2,18 +2,19 @@
 import { useEffect } from "react";
 import Script from "next/script";
 import Navbar from "@/components/Navbar";
-import BaseContent from "@/components/BaseContent";
 import HeroSection from "@/components/HeroSection";
 import BackedBy from "@/components/BackedBy";
 import CounterSection from "@/components/Counters";
 import SeeWhosTalkin from "@/components/SeeWhosTalkin";
 import AuditedBy from "@/components/AuditedBy";
+import EcosystemSection from "@/components/Ecosystem";
+import StayConnected from "@/components/StayConnected";
 
 export default function Home() {
   useEffect(() => {
     if (typeof window !== "undefined") {
       // Initialize 3D Cube here if needed
-      console.log("3DCube is ready!");
+      // console.log("3DCube is ready!");
     }
   }, []);
 
@@ -26,11 +27,10 @@ export default function Home() {
       <HeroSection />
       <BackedBy/>
       <CounterSection />
-      <SeeWhosTalkin/>
+      <EcosystemSection/>
       <AuditedBy/>
-      {/* <div className="mt-10 flex flex-col items-center space-y-10">
-        <BaseContent />
-      </div> */}
+      <SeeWhosTalkin/>
+      <StayConnected/>
     </div>
     </div>
   );

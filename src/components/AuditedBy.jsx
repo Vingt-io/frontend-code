@@ -13,7 +13,6 @@ const auditCompanyLogos = [
   ];
 
 const AuditedBy = () => {
-    auditCompanyLogos.map((logo, index)=>{console.log(logo.alt,logo.src)})
     return (
       <section className="w-full lg:py-20 bg-gray-900 text-center rounded-lg">
         <h2 className="section-title">Audited By </h2>

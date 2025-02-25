@@ -54,7 +54,6 @@ const companyLogos = [
 // ];
 
 const SeeWhosTalkin = () => {
-    companyLogos.map((logo, index)=>{console.log(logo.alt,logo.src)})
 
   return (
     <section className="section">
