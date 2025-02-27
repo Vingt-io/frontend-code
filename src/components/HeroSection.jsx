@@ -20,13 +20,13 @@ const HeroSection = () => {
   return (
     <section className="flex flex-col lg:flex-row items-center justify-between lg:px-10 pt-20 lg:py-10">
       <div className="flex flex-col lg:block lg:w-1/2">
-        <h1 className="text-4xl font-bold h-1/2 lg:h-[100px]">
+        <h1 className="text-4xl font-bold h-[120px] lg:h-[100px]">
           <span ref={textRef} className="text-[#2f5596]" />
         </h1>
         <p className="mt-4 text-lg">
           Access AI-powered index and leverage tokens for optimized, one-click portfolio management.
         </p>
-        <motion.button whileHover={{ scale: 1.1 }} className="mt-6 px-6 py-3 bg-[#2f5596] text-white rounded-lg font-semibold">
+        <motion.button whileHover={{ scale: 1.1 }} className="mt-6 px-6 py-3 bg-primaryblue text-white rounded-lg font-semibold">
           Explore Products
         </motion.button>
       </div>
