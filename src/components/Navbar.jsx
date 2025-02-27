@@ -43,7 +43,7 @@ const Navbar = () => {
 
   return (
     <motion.nav initial={{ y: -50, opacity: 0 }} animate={{ y: 0, opacity: 1 }}
-      className={`fixed top-0 left-0 w-full transition-all duration-300 ${scrolled ? "bg-[#2f5596] shadow-md " : "bg-transparent"} z-50`}>
+      className={`fixed top-0 left-0 w-full transition-all duration-300 ${scrolled ? "bg-primaryblue shadow-md " : "bg-transparent"} z-50`}>
       <div className="container mx-auto flex justify-between items-center py-4 px-6">
         {/* <img src={Logo.src} alt="Vingt.io Logo" className="h-14" /> */}
         <img src={scrolled ?Logo.src:Logo_coloured.src} alt="Vingt.io Logo" height={18} width={20} className={`${scrolled?'h-16':'ml-2'} h-14 w-auto`} />

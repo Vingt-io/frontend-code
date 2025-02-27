@@ -26,7 +26,7 @@ export default function RootLayout({ children }) {
       {/* <Head>
       <Script type="text/javascript" src="/js/3DCube-Bundle.js" />
       </Head> */}
-      <body className={`p-6 md:p-20 overflow-x-hidden overflow-y-auto bg-gradient-to-b from-black via-primaryblue to-black text-white`}>
+      <body className={`overflow-x-hidden overflow-y-auto bg-gradient-to-b from-black via-primaryblue to-black text-white`}>
         {children}
       </body>
     </html>
