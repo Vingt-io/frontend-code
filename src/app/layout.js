@@ -1,4 +1,5 @@
 import { Geist, Geist_Mono } from "next/font/google";
+import { Metadata } from 'next';
 import "./globals.css";
 
 const geistSans = Geist({
@@ -12,7 +13,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Vingt.io | AI based DeFi Ecosystem | On-chain Asset Management",
+  title: {
+    template: '%s | Vingt.io | AI based DeFi Ecosystem | On-chain Asset Management',
+    default: 'Vingt.io | AI based DeFi Ecosystem | On-chain Asset Management',
+  },
   description: "Vingt.io is an AI-powered platform for asset management, offering optimized trades and access to index and leverage tokens, all within a single dApp for quick, one-click investing.",
 };
 
@@ -22,8 +26,7 @@ export default function RootLayout({ children }) {
       {/* <Head>
       <Script type="text/javascript" src="/js/3DCube-Bundle.js" />
       </Head> */}
-      {/* <body className={`${geistSans.variable} ${geistMono.variable} antialiased `}> */}
-      <body className={`p-6 md:p-10 overflow-x-hidden overflow-y-auto bg-gradient-to-b from-black via-primaryblue to-black text-white`}>
+      <body className={`p-6 md:p-20 overflow-x-hidden overflow-y-auto bg-gradient-to-b from-black via-primaryblue to-black text-white`}>
         {children}
       </body>
     </html>

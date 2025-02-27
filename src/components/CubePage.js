@@ -15,7 +15,7 @@ export default function CubePage() {
         src="/js/3DCube-Bundle.js"
         strategy="lazyOnload"
         onLoad={() => {
-          console.log("3DCube script loaded!");
+          // console.log("3DCube script loaded!");
           if (typeof window !== "undefined" && window.init3DCube) {
             window.init3DCube(); // Ensure the script initializes properly
           }

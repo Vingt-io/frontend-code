@@ -26,7 +26,9 @@ import { motion } from "framer-motion";
 import { Menu, FileText, Mail, Rocket, Home, UsersRound } from "lucide-react";
 import Link from "next/link";
 import Logo from '@/assets/images/vingt_icons/white-logo.png';
+import Logo_coloured from '@/assets/images/vingt_icons/logo.png';
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -40,16 +42,11 @@ const Navbar = () => {
   }, []);
 
   return (
-    <motion.nav
-      initial={{ y: -50, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      className={`fixed top-0 left-0 w-full transition-all duration-300 ${
-        scrolled ? "bg-[#2f5596] shadow-md" : "bg-transparent"
-      } z-50`}
-    >
+    <motion.nav initial={{ y: -50, opacity: 0 }} animate={{ y: 0, opacity: 1 }}
+      className={`fixed top-0 left-0 w-full transition-all duration-300 ${scrolled ? "bg-[#2f5596] shadow-md " : "bg-transparent"} z-50`}>
       <div className="container mx-auto flex justify-between items-center py-4 px-6">
-        <img src={Logo.src} alt="Vingt.io Logo" className="h-10" />
-
+        {/* <img src={Logo.src} alt="Vingt.io Logo" className="h-14" /> */}
+        <img src={scrolled ?Logo.src:Logo_coloured.src} alt="Vingt.io Logo" height={18} width={20} className={`${scrolled?'h-16':'ml-2'} h-14 w-auto`} />
         <ul className="hidden md:flex gap-6 text-white">
           <li>
             <Link href="/" className="flex items-center gap-1 hover:text-gray-300">

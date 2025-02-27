@@ -138,7 +138,7 @@ const ecosystemCompanies = [
 
 const EcosystemSection = () => {
   return (
-    <section className="w-full py-10">
+    <section className="w-full py-10 lg:py-20">
       {/* <h2 className="text-3xl font-bold text-center text-[#2f5596] mb-6"> */}
       <h2 className="section-title">
         Ecosystem Infrastructure Integration

@@ -90,7 +90,7 @@ const VgtTitle = "/images/title.png";
   useEffect(() => {
     if (!isLoaded || !canvasRef.current) return;
 
-    console.log("Initializing CubeScene...");
+    // console.log("Initializing CubeScene...");
 
     const scene = new window.CubeScene({
       canvas: canvasRef.current,
