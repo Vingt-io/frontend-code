@@ -27,17 +27,11 @@ const Counter = ({ target, title }) => {
   }, [inView, target]);
 
   return (
-    <motion.div
-      ref={ref}
-      initial={{ opacity: 0, y: 30 }}
-      animate={inView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.6 }}
-      className="flex flex-col items-center"
-    >
-      <h2 className="lg:text-4xl font-bold text-[#2f5596]">
+    <motion.div ref={ref} initial={{ opacity: 0, y: 30 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6 }} className="flex flex-col items-center">
+      <h2 className="text-sm lg:text-4xl font-bold text-[#2f5596]">
         {count.toLocaleString()}+
       </h2>
-      <p className="text-sm lg:text-lg mt-2">{title}</p>
+      <p className="text-xs lg:text-lg mt-2">{title}</p>
     </motion.div>
   );
 };
@@ -59,10 +53,10 @@ const CounterSection = () => {
             transition={{ duration: 0.6 }}
             className="flex flex-col items-center"
           >
-            <h2 className="lg:text-4xl font-bold text-[#2f5596]">
-              BNBChain & Arbitrum
+            <h2 className="text-sm lg:text-4xl font-bold text-[#2f5596]">
+              BNBChain, Arbitrum
             </h2>
-            <p className="text-sm lg:text-lg mt-2">Network</p>
+            <p className="text-xs lg:text-lg mt-2">Network</p>
           </motion.div>
         </div>
       </div>

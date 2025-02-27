@@ -104,7 +104,7 @@ const VgtTitle = "/images/title.png";
     };
   }, [isLoaded]);
 
-  return <canvas id="3DLogo" className="w-[400px] h-[400px] lg:w-[500px] lg:h-[500px] " ref={canvasRef} />;
+  return <canvas id="3DLogo" className="w-[400px] h-[400px] lg:w-[500px] lg:h-[500px] canvas-container"   ref={canvasRef} />;
 };
 
 export default CubeBox;

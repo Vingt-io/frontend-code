@@ -152,10 +152,10 @@ const EcosystemSection = () => {
         {ecosystemCompanies.map((company, index) => (
           <motion.div
             key={index}
-            className="p-4 bg-gray-900 shadow-lg rounded-xl hover:shadow-2xl transition-all duration-300"
+            className="flex p-4 bg-gray-900 shadow-lg rounded-xl hover:shadow-2xl transition-all duration-300"
             whileHover={{ scale: 1.05 }}>
             <Link className="flex items-center space-x-4" href={company.link} target='_blank'>
-              <Image src={company.logo} alt={company.name} width={80} height={80} className="w-8 h-8 sm:w-16 sm:h-16 object-contain"/>
+              <Image src={company.logo} alt={company.name} width={80} height={80} className="w-8 h-8 sm:w-14 sm:h-14 object-contain"/>
               <div>
                 <h3 className="sm:text-lg font-semibold text-[#2f5596]">{company.name}</h3>
                 <p className="text-xs sm:text-sm text-gray-600">{company.description}</p>

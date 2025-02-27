@@ -18,7 +18,7 @@ const companies_incubated = [
 const BackedBy = () => {
   //rounded-lg bg-gradient-to-r from-gray-800 to-black
   return (
-    <section className="flex justify-center py-10 md:py-20 md:px-10 text-center gap-2 md:gap-0">
+    <section className="flex flex-col md:flex-row justify-center py-10 md:py-20 md:px-10 text-center gap-2 md:gap-0">
       <div className="md:px-10">
         <h2 className="text-lg font-bold text-gray-600">Backed By</h2>
         <div className="flex justify-center gap-10 mt-2">
@@ -33,7 +33,7 @@ const BackedBy = () => {
               alt={company.name}
               // width={100}
               // height={50}
-              className=" h-[60px] w-[80px]"
+              className=" w-[40px] h-[40px] md:h-[60px] md:w-[80px]"
             />
             </motion.div>
           ))}
@@ -53,7 +53,7 @@ const BackedBy = () => {
               alt={company.name}
               width={100}
               height={50}
-              className=" h-[60px] w-[100px]"
+              className=" md:h-[70px] md:w-[120px]"
             />
             </motion.div>
           ))}
