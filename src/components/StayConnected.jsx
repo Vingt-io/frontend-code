@@ -51,7 +51,7 @@ const StayConnected = () => {
   };
 
   return (
-    <section className="w-full bg-primaryblue text-white py-12 rounded-lg">
+    <section className="w-full bg-primaryblue  py-12 rounded-lg">
       <div className="max-w-3xl mx-auto text-center px-6">
         <h2 className="text-3xl font-bold mb-4">Stay Connected</h2>
         <p className="text-lg mb-6">

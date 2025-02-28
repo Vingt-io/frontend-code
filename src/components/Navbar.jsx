@@ -7,7 +7,7 @@
 //       initial={{ y: -50, opacity: 0 }} 
 //       animate={{ y: 0, opacity: 1 }} 
 //       transition={{ duration: 0.5 }}
-//       className="fixed top-0 left-0 w-full bg-gray-900 p-4 z-50 flex justify-between items-center text-white"
+//       className="fixed top-0 left-0 w-full bg-gray-900 p-4 z-50 flex justify-between items-center "
 //     >
 //       <h1 className="text-2xl font-bold">3D Cube Site</h1>
 //       <ul className="flex space-x-6">
@@ -50,7 +50,7 @@ const Navbar = () => {
         <Link href='/'>
         <img src={scrolled ?Logo.src:Logo_coloured.src} alt="Vingt.io Logo" height={18} width={20} className={`${scrolled?'h-16':'ml-2'} h-14 w-auto`} />
         </Link>
-        <ul className="hidden md:flex gap-6 text-white">
+        <ul className="hidden md:flex gap-6 ">
           <li>
             <Link href="/" className="flex items-center gap-1 hover:text-gray-300">
               <Home /> Home
@@ -79,17 +79,17 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
         <div className="flex gap-2">
-        <Link href="https://app.vingt.io/" className="bg-primaryblue px-4 py-2 rounded-md text-white hover:bg-blue-700 transition text-center md:hidden" onClick={() => setMenuOpen(false)}>Launch App</Link>
-        <button className="md:hidden text-white hover:bg-primaryblue" onClick={()=>setMenuOpen(!menuOpen)}>
+        <Link href="https://app.vingt.io/" className="bg-primaryblue px-4 py-2 rounded-md  hover:bg-blue-700 transition text-center md:hidden" onClick={() => setMenuOpen(false)}>Launch App</Link>
+        <button className="md:hidden  hover:bg-primaryblue" onClick={()=>setMenuOpen(!menuOpen)}>
           {menuOpen?<X size={24}/>:<Menu size={24} />}
         </button>
         {menuOpen && (
         <div className="md:hidden absolute top-full left-0 w-full bg-black p-4 flex flex-col items-center space-y-4">
-          <Link href="/" className="flex gap-2 text-white" onClick={() => setMenuOpen(false)}><Home />Home</Link>
-          <Link href="https://app.vingt.io/aboutUs" className="flex gap-2 text-white" onClick={() => setMenuOpen(false)}><UsersRound />About Us</Link>
-          <Link href="https://vingt-io.gitbook.io/vingt.io" className="flex gap-2 text-white" onClick={() => setMenuOpen(false)}><FileText />Whitepaper</Link>
-          <Link href="mailto:support@vingt.io" className="flex gap-2 text-white" onClick={() => setMenuOpen(false)}><Mail />Contact Us</Link>
-          <Link href="https://app.vingt.io/" className="bg-primaryblue px-4 py-2 rounded-md text-white hover:bg-blue-700 transition w-full text-center" onClick={() => setMenuOpen(false)}>Launch App</Link>
+          <Link href="/" className="flex gap-2 " onClick={() => setMenuOpen(false)}><Home />Home</Link>
+          <Link href="https://app.vingt.io/aboutUs" className="flex gap-2 " onClick={() => setMenuOpen(false)}><UsersRound />About Us</Link>
+          <Link href="https://vingt-io.gitbook.io/vingt.io" className="flex gap-2 " onClick={() => setMenuOpen(false)}><FileText />Whitepaper</Link>
+          <Link href="mailto:support@vingt.io" className="flex gap-2 " onClick={() => setMenuOpen(false)}><Mail />Contact Us</Link>
+          <Link href="https://app.vingt.io/" className="bg-primaryblue px-4 py-2 rounded-md  hover:bg-blue-700 transition w-full text-center" onClick={() => setMenuOpen(false)}>Launch App</Link>
         </div>
       )}</div>
       </div>

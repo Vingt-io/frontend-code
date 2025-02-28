@@ -14,7 +14,7 @@ const auditCompanyLogos = [
 
 const AuditedBy = () => {
     return (
-      <section className="w-full py-10 lg:py-20 bg-gray-900 text-center rounded-lg">
+      <section className="w-full py-10 lg:py-20  text-center rounded-lg">
         <h2 className="section-title">Audited By </h2>
         <p className="section-subtitle">the best in the industry</p>
 

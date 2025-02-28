@@ -1,15 +1,13 @@
 "use client"
 import { useEffect } from "react";
 import Script from "next/script";
-import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
-import BackedBy from "@/components/BackedBy";
 import CounterSection from "@/components/Counters";
 import SeeWhosTalkin from "@/components/SeeWhosTalkin";
 import AuditedBy from "@/components/AuditedBy";
 import EcosystemSection from "@/components/Ecosystem";
 import StayConnected from "@/components/StayConnected";
-import Footer from "@/components/Footer";
+import BackedBy from "@/components/BackedBy";
 
 export default function Home() {
   useEffect(() => {
@@ -20,20 +18,15 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="min-h-screen">
-      {/* <h1 className="text-white text-3xl">3D Cube Demo</h1> */}
+    <div className="">
       <Script src="/js/3DCube-Bundle.js" strategy="beforeInteractive" onLoad={() => console.log("3DCube script loaded!")}/>
-      <Navbar />
-      <div className="p-6 md:p-20 ">
         <HeroSection />
-        <BackedBy/>
         <CounterSection />
-        <EcosystemSection/>
+        <BackedBy/>
         <AuditedBy/>
+        <EcosystemSection/>
         <SeeWhosTalkin/>
         <StayConnected/>
-      </div>
-      <Footer/>
     </div>
   );
 }

@@ -28,7 +28,7 @@ const Counter = ({ target, title }) => {
 
   return (
     <motion.div ref={ref} initial={{ opacity: 0, y: 30 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6 }} className="flex flex-col items-center">
-      <h2 className="text-sm lg:text-4xl font-bold text-[#2f5596]">
+      <h2 className="text-sm lg:text-4xl font-bold text-[#2f5596] lg:h-[80px]">
         {count.toLocaleString()}+
       </h2>
       <p className="text-xs lg:text-lg mt-2">{title}</p>
@@ -38,12 +38,12 @@ const Counter = ({ target, title }) => {
 
 const CounterSection = () => {
   return (
-    <section className="w-full py-10 lg:py-20 bg-gray-900 text-white text-center rounded-lg">
+    <section className="w-full py-10 lg:py-20 bg-gray-900  text-center rounded-lg">
       <div className="max-w-6xl mx-auto lg:px-4">
         <div className="grid grid-cols-5 gap-6">
-          <Counter title="Users" target={2500} />
-          <Counter title="Total Value Locked" target={1020000} />
-          <Counter title="DEX Liquidity" target={1400} />
+          <Counter title="Users" target={200} />
+          <Counter title="Total Value Locked" target={1000} />
+          <Counter title="External Liquidity" target={3000} />
           <Counter title="Active Ecosystem Protocols" target={3} />
 
           {/* Network Section (Static Text) */}

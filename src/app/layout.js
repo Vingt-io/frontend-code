@@ -1,6 +1,8 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import { Metadata } from 'next';
 import "./globals.css";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -23,11 +25,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      {/* <Head>
-      <Script type="text/javascript" src="/js/3DCube-Bundle.js" />
-      </Head> */}
-      <body className={`overflow-x-hidden overflow-y-auto bg-gradient-to-b from-black via-primaryblue to-black text-white`}>
-        {children}
+      <body className={`overflow-x-hidden overflow-y-auto bg-gradient-to-b from-black via-primaryblue to-black text-[#e0e0e0]`}>
+        <Navbar/>
+        <div className="min-h-screen p-6 md:p-10 lg:p-40 ">{children}</div>
+        <Footer/>
       </body>
     </html>
   );

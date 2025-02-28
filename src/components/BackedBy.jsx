@@ -1,63 +1,79 @@
-import Image from "next/image";
+"use client";
 import { motion } from "framer-motion";
-
+import Image from "next/image";
 import platinum from "@/assets/images/backedby/platinum.png";
 import stanford from "@/assets/images/backedby/stanford.jpeg";
-import spores from "@/assets/images/backedby/spores.jpg";
 import palo from "@/assets/images/backedby/palo.png";
-import ibc from "@/assets/images/incubatedby/ibc.png";
-const companies_backed = [
-  { name: "Platinum", logo: platinum },
-  { name: "Stanford", logo: stanford },
-  { name: "Spores", logo: spores },
-  { name: "Palo", logo: palo },
+import Link from "next/link";
+const backedByCompanies = [
+  {
+    name: "Platinum",
+    logo: platinum,
+    description: "A leading blockchain investment firm backing innovation in Web3.",
+    link: 'https://vc.platinum.fund/en/',
+  },
+  {
+    name: "Stanfod",
+    logo: stanford,
+    description: "Pioneering venture capital firm focused on decentralized finance.",
+    link: 'http://crypto.stanford.edu/',
+  },
+  {
+    name: "PALO",
+    logo: palo,
+    description: "Accelerating growth in the DeFi ecosystem with strategic funding.",
+    link: 'https://www.paloaltonetworks.com/',
+  },
+//   {
+//     name: "Web3 Innovations",
+//     logo: "/images/web3-innovations.png",
+//     description: "A global firm supporting next-gen blockchain applications.",
+//   },
 ];
-const companies_incubated = [
-  { name: "IBC", logo: ibc },
-];
+
 const BackedBy = () => {
-  //rounded-lg bg-gradient-to-r from-gray-800 to-black
   return (
-    <section className="flex flex-col md:flex-row justify-center py-10 md:py-20 md:px-10 text-center gap-2 md:gap-0">
-      <div className="md:px-10">
-        <h2 className="text-lg font-bold text-gray-600">Backed By</h2>
-        <div className="flex justify-center gap-10 mt-2">
-          {companies_backed.map((company, index) => (
-              <motion.div
+    <section className=" py-16 px-6">
+      <div className="max-w-6xl mx-auto">
+        <motion.h2
+          className="section-title"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true }}
+        >
+          Backed By
+        </motion.h2>
+        
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-3  gap-8"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, ease: "easeInOut", delay: 0.2 }}
+          viewport={{ once: true }}
+        >
+          {backedByCompanies.map((company, index) => (
+            <motion.div
               key={index}
-              initial={{ y: 100, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              transition={{ duration: 1 }}>
-            <Image
-              src={company.logo}
-              alt={company.name}
-              // width={100}
-              // height={50}
-              className=" w-[40px] h-[40px] md:h-[60px] md:w-[80px]"
-            />
+            //   className="bg-[#1a1a1a] p-6 rounded-lg shadow-lg text-center  hover:scale-105 transition-transform duration-300"
+              className="bg-gray-900 p-6 rounded-lg shadow-lg text-center  hover:scale-105 transition-transform duration-300"
+              whileHover={{ scale: 1.1 }}
+            >
+                <Link href={company.link} target="_blank">
+              <Image
+                src={company.logo}
+                alt={company.name}
+                width={100}
+                height={100}
+                className="mx-auto mb-4 w-auto h-20"
+              />
+              <h3 className="text-xl font-medium text-[#2f5596]">{company.name}</h3>
+              <p className="text-[#b0b0b0] mt-2">{company.description}</p>
+              </Link>
             </motion.div>
+            
           ))}
-        </div>
-      </div>
-      <div className="md:px-10">
-        <h2 className="text-lg font-bold text-gray-600">Incubated By</h2>
-        <div className="flex justify-center gap-10 mt-2">
-          {companies_incubated.map((company, index) => (
-              <motion.div
-              key={index}
-              initial={{ y: 100, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              transition={{ duration: 1 }}>
-            <Image
-              src={company.logo}
-              alt={company.name}
-              width={100}
-              height={50}
-              className=" md:h-[70px] md:w-[120px]"
-            />
-            </motion.div>
-          ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
