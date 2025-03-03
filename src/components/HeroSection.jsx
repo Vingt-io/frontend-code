@@ -35,7 +35,7 @@ const HeroSection = () => {
         <motion.button whileHover={{ scale: 1.1 }} onClick={()=>{push('/products')}} className="mt-6 px-6 py-3 bg-primaryblue rounded-lg font-semibold">
           Explore Products
         </motion.button>
-        <div className="flex lg:flex-col items-center lg:items-start justify-center ml-6 gap-4 lg:gap-0 mt-2 lg:mt-8">
+        <div className="flex lg:flex-col items-center lg:items-start justify-center  gap-4 lg:gap-0 mt-2 lg:mt-8">
             <h2 className="text-lg font-bold text-gray-600">Incubated By</h2>
             <div className=" gap-10 mt-2">
               {companies_incubated.map((company, index) => (
@@ -50,7 +50,7 @@ const HeroSection = () => {
                   key={index}
                   width={100}
                   height={50}
-                  className=" md:h-[70px] w-[120px]"
+                  className=" md:h-[70px] w-auto"
                 />
                 // </motion.div>
               ))}

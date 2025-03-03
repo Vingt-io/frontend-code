@@ -3,32 +3,41 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import platinum from "@/assets/images/backedby/platinum.png";
 import stanford from "@/assets/images/backedby/stanford.jpeg";
-import palo from "@/assets/images/backedby/palo.png";
+import Arbitrum from "@/assets/images/backedby/ARB.png";
+import axone from '@/assets/images/backedby/axone.png';
+import defilama from "@/assets/images/backedby/defilama.jpg";
 import Link from "next/link";
 const backedByCompanies = [
   {
-    name: "Platinum",
+    name: "Platinum Capital",
     logo: platinum,
     description: "A leading blockchain investment firm backing innovation in Web3.",
     link: 'https://vc.platinum.fund/en/',
   },
   {
-    name: "Stanfod",
+    name: "Stanford AI & Web3 Research Lab",
     logo: stanford,
     description: "Pioneering venture capital firm focused on decentralized finance.",
-    link: 'http://crypto.stanford.edu/',
+    link: null,
   },
   {
-    name: "PALO",
-    logo: palo,
+    name: "Arbitrum",
+    logo: Arbitrum,
     description: "Accelerating growth in the DeFi ecosystem with strategic funding.",
-    link: 'https://www.paloaltonetworks.com/',
+    link: 'https://arbitrum.io/',
   },
-//   {
-//     name: "Web3 Innovations",
-//     logo: "/images/web3-innovations.png",
-//     description: "A global firm supporting next-gen blockchain applications.",
-//   },
+  {
+    name: "Axone",
+    logo: axone,
+    description: "A global firm supporting next-gen blockchain applications.",
+    lonk: 'https://www.axone.xyz/'
+  }, 
+  {
+    name: "Defi Llama",
+    logo: defilama,
+    description: "A global firm supporting next-gen blockchain applications.",
+    lonk: 'https://defillama.com'
+  },
 ];
 
 const BackedBy = () => {
@@ -42,34 +51,25 @@ const BackedBy = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: true }}
         >
-          Backed By
+        Supported By
         </motion.h2>
-        
+        <p className="section-subtitle">Leading industry experts and trusted partners.</p>
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-3  gap-8"
+          className="grid grid-cols-1 md:grid-cols-5  gap-8"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: "easeInOut", delay: 0.2 }}
           viewport={{ once: true }}
         >
           {backedByCompanies.map((company, index) => (
-            <motion.div
-              key={index}
+            <motion.div key={index}
             //   className="bg-[#1a1a1a] p-6 rounded-lg shadow-lg text-center  hover:scale-105 transition-transform duration-300"
-              className="bg-gray-900 p-6 rounded-lg shadow-lg text-center  hover:scale-105 transition-transform duration-300"
-              whileHover={{ scale: 1.1 }}
-            >
-                <Link href={company.link} target="_blank">
-              <Image
-                src={company.logo}
-                alt={company.name}
-                width={100}
-                height={100}
-                className="mx-auto mb-4 w-auto h-20"
-              />
-              <h3 className="text-xl font-medium text-[#2f5596]">{company.name}</h3>
-              <p className="text-[#b0b0b0] mt-2">{company.description}</p>
-              </Link>
+              className=" bg-gray-900 p-6 rounded-lg shadow-lg text-center  hover:scale-105 transition-transform duration-300" whileHover={{ scale: 1.1 }}> 
+              <Link href={company.link?company.link:''} target="_blank">
+                <Image src={company.logo} alt={company.name} width={100} height={100} className="mx-auto w-20 h-1/3"/>
+                <h3 className="text-lg font-medium text-[#2f5596]">{company.name}</h3>
+              {/* <p className="text-[#b0b0b0] mt-2">{company.description}</p> */}
+                </Link>
             </motion.div>
             
           ))}
