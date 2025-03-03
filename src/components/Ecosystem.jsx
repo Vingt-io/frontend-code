@@ -148,7 +148,7 @@ const EcosystemSection = () => {
         Partnering with leading companies to build a robust blockchain ecosystem.
       </p>
 
-      <div className="grid lg:grid-cols-5 sm:grid-cols-2 grid-cols-2 gap-6 ">
+      <div className="grid xl:grid-cols-5 lg:grid-cols-3 sm:grid-cols-2 grid-cols-2 gap-6 ">
         {ecosystemCompanies.map((company, index) => (
           <motion.div
             key={index}

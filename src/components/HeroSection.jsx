@@ -6,9 +6,10 @@ import CubeBox from "./CubeBox";
 import { useRouter } from "next/navigation";
 import ibc from "@/assets/images/incubatedby/ibc.png";
 import Image from "next/image";
+import Link from "next/link";
 
 const companies_incubated = [
-  { name: "IBC", logo: ibc },
+  { name: "IBC", logo: ibc, link: 'https://www.ibcgroup.io/' },
 ];
 const HeroSection = () => {
   const textRef = useRef(null);
@@ -44,14 +45,9 @@ const HeroSection = () => {
                   // initial={{ y: 100, opacity: 0 }}
                   // whileInView={{ y: 0, opacity: 1 }}
                   // transition={{ duration: 1 }}>
-                <Image
-                  src={company.logo}
-                  alt={company.name}
-                  key={index}
-                  width={100}
-                  height={50}
-                  className=" md:h-[70px] w-auto"
-                />
+                  <Link href={company.link} target="_blank" key={index} >
+                    <Image src={company.logo} alt={company.name} width={100} height={50} className=" md:h-[70px] w-auto hover:scale-105 transition-transform duration-300"/>
+                  </Link>
                 // </motion.div>
               ))}
             </div>

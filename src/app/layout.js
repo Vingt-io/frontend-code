@@ -27,7 +27,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`overflow-x-hidden overflow-y-auto bg-gradient-to-b from-black via-primaryblue to-black text-[#e0e0e0]`}>
         <Navbar/>
-        <div className="min-h-screen p-6 md:p-10 lg:p-40 ">{children}</div>
+        <div className="min-h-screen p-6 md:p-10 xl:p-40 ">{children}</div>
         <Footer/>
       </body>
     </html>
