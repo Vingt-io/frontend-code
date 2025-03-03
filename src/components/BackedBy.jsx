@@ -64,9 +64,9 @@ const BackedBy = () => {
           {backedByCompanies.map((company, index) => (
             <motion.div key={index}
             //   className="bg-[#1a1a1a] p-6 rounded-lg shadow-lg text-center  hover:scale-105 transition-transform duration-300"
-              className=" bg-gray-900 p-6 rounded-lg shadow-lg text-center  hover:scale-105 transition-transform duration-300" whileHover={{ scale: 1.1 }}> 
+              className=" bg-gray-900 p-2 lg:p-6 rounded-lg shadow-lg text-center  hover:scale-105 transition-transform duration-300" whileHover={{ scale: 1.1 }}> 
               <Link href={company.link?company.link:''} target="_blank">
-                <Image src={company.logo} alt={company.name} width={100} height={100} className="mx-auto w-12 h-10"/>
+                <Image src={company.logo} alt={company.name} width={100} height={100} className="mx-auto mb-2 w-12 h-10"/>
                 <h3 className="text-lg font-medium text-[#2f5596]">{company.name}</h3>
               {/* <p className="text-[#b0b0b0] mt-2">{company.description}</p> */}
                 </Link>
