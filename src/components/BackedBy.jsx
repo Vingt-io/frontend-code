@@ -30,13 +30,13 @@ const backedByCompanies = [
     name: "Axone",
     logo: axone,
     description: "A global firm supporting next-gen blockchain applications.",
-    lonk: 'https://www.axone.xyz/'
+    link: 'https://www.axone.xyz/'
   }, 
   {
     name: "Defi Llama",
     logo: defilama,
     description: "A global firm supporting next-gen blockchain applications.",
-    lonk: 'https://defillama.com'
+    link: 'https://defillama.com'
   },
 ];
 
@@ -54,22 +54,20 @@ const BackedBy = () => {
         Supported By
         </motion.h2>
         <p className="section-subtitle">Leading industry experts and trusted partners.</p>
-        <motion.div
-          className="grid grid-cols-1 md:grid-cols-5  gap-8"
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, ease: "easeInOut", delay: 0.2 }}
-          viewport={{ once: true }}
-        >
+        <motion.div className="grid grid-cols-1 md:grid-cols-5  gap-8" initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1, ease: "easeInOut", delay: 0.2 }} viewport={{ once: true }}>
           {backedByCompanies.map((company, index) => (
             <motion.div key={index}
             //   className="bg-[#1a1a1a] p-6 rounded-lg shadow-lg text-center  hover:scale-105 transition-transform duration-300"
-              className=" bg-gray-900 p-2 lg:p-6 rounded-lg shadow-lg text-center  hover:scale-105 transition-transform duration-300" whileHover={{ scale: 1.1 }}> 
-              <Link href={company.link?company.link:''} target="_blank">
+              className=" bg-gray-900 p-2 lg:p-6 rounded-lg shadow-lg text-center  " whileHover={{ scale: 1.1 }}> 
+              {company.link?<Link href={company.link} target="_blank" className="hover:scale-105 transition-transform duration-300">
                 <Image src={company.logo} alt={company.name} width={100} height={100} className="mx-auto mb-2 w-12 h-10"/>
                 <h3 className="text-lg font-medium text-[#2f5596]">{company.name}</h3>
               {/* <p className="text-[#b0b0b0] mt-2">{company.description}</p> */}
-                </Link>
+                </Link>:
+                <>
+                <Image src={company.logo} alt={company.name} width={100} height={100} className="mx-auto mb-2 w-12 h-10"/>
+                <h3 className="text-lg font-medium text-[#2f5596]">{company.name}</h3>
+                </>}
             </motion.div>
             
           ))}
