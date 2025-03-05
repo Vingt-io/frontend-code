@@ -27,7 +27,7 @@ const HeroSection = () => {
   return (
     <section className="flex flex-col lg:flex-row items-center justify-between lg:px-10 pt-20 lg:py-10">
       <div className="flex flex-col lg:block lg:w-1/2">
-        <h1 className="text-4xl font-bold h-[120px] lg:h-[100px]">
+        <h1 className="text-4xl font-bold h-[160px] md:h-[100px]">
           <span ref={textRef} className="text-[#2f5596]" />
         </h1>
         <p className="mt-4 text-lg">

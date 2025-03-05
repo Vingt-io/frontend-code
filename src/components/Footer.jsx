@@ -15,7 +15,7 @@ const Footer = () => {
         </div>
 
         {/* Center - Links */}
-        <div className="flex gap-8 text-sm md:text-base font-medium text-gray-300">
+        <div className="flex gap-4 md:gap-8 text-xs md:text-base font-medium text-gray-300">
           <Link href="https://hzpnphtag8t.typeform.com/to/FVnYq110" target="_blank" className="hover:text-primaryblue transition">VingtLabs</Link>
           <Link href="https://vingt-io.gitbook.io/vingt.io/miscellaneous/legal" target="_blank" className="hover:text-primaryblue transition">Legal</Link>
           <Link href="https://vingt-io.gitbook.io/vingt.io/miscellaneous/legal/terms-of-service-dapp" target="_blank" className="hover:text-primaryblue transition">Terms Of Service</Link>

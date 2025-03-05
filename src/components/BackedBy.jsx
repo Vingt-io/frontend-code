@@ -2,10 +2,10 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import platinum from "@/assets/images/backedby/platinum.png";
-import stanford from "@/assets/images/backedby/stanford.jpeg";
+import stanford from "@/assets/images/backedby/stanford.png";
 import Arbitrum from "@/assets/images/backedby/ARB.png";
 import axone from '@/assets/images/backedby/axone.png';
-import defilama from "@/assets/images/backedby/defilama.jpg";
+import defilama from "@/assets/images/backedby/defilama.png";
 import Link from "next/link";
 const backedByCompanies = [
   {
@@ -60,13 +60,13 @@ const BackedBy = () => {
             //   className="bg-[#1a1a1a] p-6 rounded-lg shadow-lg text-center  hover:scale-105 transition-transform duration-300"
               className=" bg-gray-900 p-2 lg:p-6 rounded-lg shadow-lg text-center  " whileHover={{ scale: 1.1 }}> 
               {company.link?<Link href={company.link} target="_blank" className="hover:scale-105 transition-transform duration-300">
-                <Image src={company.logo} alt={company.name} width={100} height={100} className="mx-auto mb-2 w-12 h-10"/>
-                <h3 className="text-lg font-medium text-[#2f5596]">{company.name}</h3>
+                <Image src={company.logo} alt={company.name} width={100} height={100} className="mx-auto md:mb-2 w-12 h-10"/>
+                <h3 className="lg:text-lg font-medium text-[#2f5596]">{company.name}</h3>
               {/* <p className="text-[#b0b0b0] mt-2">{company.description}</p> */}
                 </Link>:
                 <>
-                <Image src={company.logo} alt={company.name} width={100} height={100} className="mx-auto mb-2 w-12 h-10"/>
-                <h3 className="text-lg font-medium text-[#2f5596]">{company.name}</h3>
+                <Image src={company.logo} alt={company.name} width={100} height={100} className="mx-auto md:mb-2 w-12 h-10"/>
+                <h3 className="lg:text-lg font-medium text-[#2f5596]">{company.name}</h3>
                 </>}
             </motion.div>
             

@@ -43,6 +43,10 @@ button:hover {
   margin-bottom: 20px;
   text-align: center;
 }
+.canvas-container{
+  width: 500px;
+  height: 500px;
+}
 @media (max-width: 768px) {
   .section {
     padding: 40px 0;
