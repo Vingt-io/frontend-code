@@ -17,6 +17,7 @@ export default function Home() {
     }
   }, []);
 
+  
   return (
     <div className="">
       <Script src="/js/3DCube-Bundle.js" strategy="beforeInteractive" onLoad={() => console.log("3DCube script loaded!")}/>
