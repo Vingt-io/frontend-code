@@ -16,7 +16,6 @@ export default function Home() {
       // console.log("3DCube is ready!");
     }
   }, []);
-
   
   return (
     <div className="">
