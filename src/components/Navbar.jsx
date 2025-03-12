@@ -79,7 +79,7 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
         <div className="flex gap-2">
-        <Link href="https://app.vingt.io/" className="bg-white text-primaryblue font-bold px-4 py-2 rounded-md  hover:bg-blue-700 transition text-center md:hidden" onClick={() => setMenuOpen(false)}>Launch App</Link>
+        <Link href="https://app.vingt.io/" className="bg-white text-primaryblue font-bold px-4 py-2 rounded-md  hover:bg-gray-200 transition text-center md:hidden" onClick={() => setMenuOpen(false)}>Launch App</Link>
         <button className="md:hidden  hover:bg-primaryblue" onClick={()=>setMenuOpen(!menuOpen)}>
           {menuOpen?<X size={24}/>:<Menu size={24} />}
         </button>
