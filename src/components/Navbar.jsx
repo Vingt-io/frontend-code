@@ -73,13 +73,13 @@ const Navbar = () => {
           </li>
         </ul>
 
-        <button onClick={()=>push('https://app.vingt.io/')} className="hidden md:block px-4 py-2 bg-white text-primaryblue rounded-lg font-semibold hover:bg-gray-200">
+        <button onClick={() => window.open('https://app.vingt.io/', '_blank', 'noopener,noreferrer')}  className="hidden md:block px-4 py-2 bg-white text-primaryblue rounded-lg font-semibold hover:bg-gray-200">
           Launch App <Rocket className="inline-block ml-2" size={18} />
         </button>
 
         {/* Mobile Menu */}
         <div className="flex gap-2">
-        <Link href="https://app.vingt.io/" className="bg-primaryblue px-4 py-2 rounded-md  hover:bg-blue-700 transition text-center md:hidden" onClick={() => setMenuOpen(false)}>Launch App</Link>
+        <Link href="https://app.vingt.io/" className="bg-white text-primaryblue font-bold px-4 py-2 rounded-md  hover:bg-blue-700 transition text-center md:hidden" onClick={() => setMenuOpen(false)}>Launch App</Link>
         <button className="md:hidden  hover:bg-primaryblue" onClick={()=>setMenuOpen(!menuOpen)}>
           {menuOpen?<X size={24}/>:<Menu size={24} />}
         </button>

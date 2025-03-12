@@ -5,8 +5,7 @@ import { product_BTCleveragetoken } from "@/assets/data/productBTCLevToken";
 import { product_ETHleveragetoken } from "@/assets/data/productETHLevToken";
 import Link from 'next/link';
 
-const topSectionPaddingTop = process.env.TOP_SEC_PADDING_TOP || '180px';
-const sectionPaddingTop = process.env.SEC_PADDING_TOP || '80px';
+
 
 const Products = () => {
     return (

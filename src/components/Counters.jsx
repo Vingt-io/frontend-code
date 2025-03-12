@@ -42,7 +42,7 @@ const CounterSection = () => {
       <div className="max-w-6xl mx-auto lg:px-4">
         <div className="grid grid-cols-5 gap-6">
           <Counter title="Users" target={200} suffix='+'/>
-          <Counter title="Total Value Locked" target={1000} suffix='+'/>
+          <Counter title="Total Value Locked" target={10000} suffix='+'/>
           <Counter title="External Liquidity" target={3000} suffix='M+'/>
           <Counter title="Active Ecosystem Protocols" target={3} />
 
