@@ -6,6 +6,7 @@ import stanford from "@/assets/images/backedby/stanford.png";
 import Arbitrum from "@/assets/images/backedby/ARB.png";
 import axone from '@/assets/images/backedby/axone.png';
 import defilama from "@/assets/images/backedby/defilama.png";
+import dia from "@/assets/images/backedby/dia.jpg";
 import Link from "next/link";
 const backedByCompanies = [
   {
@@ -38,6 +39,12 @@ const backedByCompanies = [
     description: "A global firm supporting next-gen blockchain applications.",
     link: 'https://defillama.com'
   },
+  {
+    name: "DIA Ecosystem",
+    logo: dia,
+    description: "A global firm supporting next-gen blockchain applications.",
+    link: 'https://www.diadata.org'
+  },
 ];
 
 const BackedBy = () => {
@@ -54,7 +61,7 @@ const BackedBy = () => {
         Supported By
         </motion.h2>
         <p className="section-subtitle">Leading industry experts and trusted partners.</p>
-        <motion.div className="grid grid-cols-1 md:grid-cols-5  gap-8" initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1, ease: "easeInOut", delay: 0.2 }} viewport={{ once: true }}>
+        <motion.div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6  gap-8" initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1, ease: "easeInOut", delay: 0.2 }} viewport={{ once: true }}>
           {backedByCompanies.map((company, index) => (
             <motion.div key={index}
             //   className="bg-[#1a1a1a] p-6 rounded-lg shadow-lg text-center  hover:scale-105 transition-transform duration-300"
