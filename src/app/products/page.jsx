@@ -40,7 +40,7 @@ const Products = () => {
                                     <li key={pointIndex}>{point}</li>
                                 ))}
                             </ul>
-                            <div className="mt-4 grid grid-cols-3 text-center gap-4 ">
+                            {/* <div className="mt-4 grid grid-cols-3 text-center gap-4 ">
                                 <div>
                                     <p className="font-semibold text-xs lg:text-base">Price</p>
                                     <p className='text-sm lg:text-base'>{product.price}</p>
@@ -53,7 +53,7 @@ const Products = () => {
                                     <p className="font-semibold text-xs lg:text-base">Market Cap</p>
                                     <p className='text-sm lg:text-base'>{product.market_cap}</p>
                                 </div>
-                            </div>
+                            </div> */}
                         </div>
                     ))}
                 </div>
@@ -65,9 +65,10 @@ const Products = () => {
                         <thead>
                             <tr className="bg-primaryblue border-b border-[#e0e0e0] text-xs md:text-base ">
                                 <th className="md:p-3">Product Description</th>
-                                <th className="md:p-3">Price</th>
+                                <th className="md:p-3">Network</th>
                                 <th className="md:p-3">Symbol</th>
-                                <th className="md:p-3">Market Cap</th>
+                                <th className="md:p-3 hidden md:block">Allocation</th>
+                                <th className="md:p-3"></th>
                             </tr>
                         </thead>
                         <tbody>
@@ -77,9 +78,12 @@ const Products = () => {
                                         <Image src={product.image} alt="Product Image" className="w-8 h-6 md:w-auto md:h-10" />
                                         <Link href={product.link} target="_blank" className=" text-blue-500 hover:text-white transition-colors">{product.description}</Link>
                                     </td>
-                                    <td className="py-2 md:p-3">{product.price}</td>
+                                    <td className="py-2 md:p-3">{product.network}</td>
                                     <td className="py-2  md:p-3">{product.symbol}</td>
-                                    <td className="py-2 md:p-3">{product.market_cap}</td>
+                                    <td className={`hidden md:flex md:p-2  items-center  justify-center -space-x-4 sm:-space-x-3 lg:-space-x-2 `}>
+                                    {product.allocation.map((src, index) => (<Image key={index} src={src} alt={`Token ${index + 1}`} width={24} height={24} className=" inline-block rounded-full ring-2 ring-primary"/>))}
+                                    </td>
+                                    <td><Link href={product.buyLink} target="_blank" className="relative text-xs md:text-sm font-medium text-[#e0e0e0] after:block after:content-[''] after:absolute after:left-0 after:bottom-[-2] after:h-[4px] after:bg-primaryblue after:animate-underline">Buy/Sell</Link></td>
                                 </tr>
                             ))}
                         </tbody>
@@ -95,9 +99,10 @@ const Products = () => {
                             <thead>
                                 <tr className="text-xs md:text-base bg-primaryblue border-b border-[#e0e0e0]">
                                     <th className="p-3 ">Product Description</th>
-                                    <th className="p-3 ">Price</th>
+                                    <th className="p-3 ">Network</th>
                                     <th className="p-3 ">Symbol</th>
-                                    <th className="p-3 ">Market Cap</th>
+                                    <th className="p-3 hidden md:block ">Leverage Ratio</th>
+                                    <th className="p-3 "></th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -107,9 +112,10 @@ const Products = () => {
                                             <Image src={product.image} alt="Product Image" className="w-8 h-6 md:w-auto md:h-10" />
                                             <Link href={product.link} target="_blank" className="text-blue-500 hover:text-white transition-colors">{product.description}</Link>
                                         </td>
-                                        <td className="py-2 md:p-3 ">{product.price}</td>
+                                        <td className="py-2 md:p-3 ">{product.network}</td>
                                         <td className="py-2 md:p-3 ">{product.symbol}</td>
-                                        <td className="py-2 md:p-3 ">{product.market_cap}</td>
+                                        <td className="py-2 md:p-3 hidden md:block">{product.ratio}</td>
+                                        <td><Link href={product.buyLink} target="_blank" className="relative text-xs md:text-sm font-medium text-[#e0e0e0] after:block after:content-[''] after:absolute after:left-0 after:bottom-[-2] after:h-[4px] after:bg-primaryblue after:animate-underline">Buy/Sell</Link></td>
                                     </tr>
                                 ))}
                             </tbody>
